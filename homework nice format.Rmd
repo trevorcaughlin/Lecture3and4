@@ -1,0 +1,57 @@
+---
+title: "Homework1"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+
+
+How are these assumptions generated?
+
+Write out R code for R2, RMSE, lm and coef
+
+Questions: 
+Data 1: 
+
+Source: Wagner, Agahajanian, and Bing (1968). Correlation of Performance Test Scores with Tissue Concentration of Lysergic Acid Diethylamide in Human Subjects. Clinical Pharmacology and Therapeutics, Vol.9 pp635-638.
+
+
+Data 2: poorly behaved data (high pvalue)
+Interpret slope and intercept, fiit model
+
+3: write a function for MAE. MAE is often favorable because it makes fewer assumptions about the error than R2 and RMSE. Calculate MAE, R2, and RMSE for models 1 and 2. How do they vary?
+
+4. use rnorm to simulate a dataset with an intercept and a slope. Run a lm on this data
+
+5. simulate and plot unequal variance of errors
+
+
+
+1.	Write a function for mean absolute error:
+Hint: here's a function for RMSE
+
+2.	Simulate data: rnorm(..) non-linear terms
+3.	Linear models: pvalues and effect sizes
+4.	Compare RMSE and MAE between your different models. What can they tell you about the model?
+5.	Simulate rnorm variance depends on the mean
+6.	Simulate power law function (describes lots of stuff)
+
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
