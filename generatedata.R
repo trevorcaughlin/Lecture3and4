@@ -18,10 +18,8 @@ MATH<-c(78.93,
 32.92,
 29.97)
 
-#what should your tissue concentration be to get a grade of 
-#75?
 
-
+set.seed(1)
 pomegranate<-rpois(1000,3)
 
 intercept=0.1
