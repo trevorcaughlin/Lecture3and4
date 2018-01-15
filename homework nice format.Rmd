@@ -15,11 +15,47 @@ How are these assumptions generated?
 
 Write out R code for R2, RMSE, lm and coef
 
-Questions: 
-Data 1: 
+For questions 1 and 2, please run a linear regression 
+on the data using:
+```{r lm}
+args(lm)
+```
+For output to these questions, please include 
+a) a scatterplot of the dependent and indepedent variable with a line added representing best fit least squares model
+
+b) Parameter estimates and 95% CI for slope and intercept parameters
+
+c) A metric of model fit (either R2 or RMSE)
+
+Question 1: 
+
+This question refers to the following dataset:
+math_scores.csv
+
+```{r mathscores}
+math<-read.csv("math_scores.csv")
+head(math)
+```
+
+These data represent the average performance test scores of groups of human subjects with varying tissue concentrations of LSD (yes this is a real dataset--see citation below). Using least squares regression, calculate:
+
+A. What level of LSD tissue concentration do you need to ensure a test score of >85%?
+
+B. How well does LSD tissue concentration predict test performance?
+
+C. Why might the Normal distribution be the wrong probability distribution function to model these data?
 
 Source: Wagner, Agahajanian, and Bing (1968). Correlation of Performance Test Scores with Tissue Concentration of Lysergic Acid Diethylamide in Human Subjects. Clinical Pharmacology and Therapeutics, Vol.9 pp635-638.
 
+Question 2:
+
+These data refer to the data frame
+miracle_food.csv
+
+```{r math}
+math<-read.csv("math_scores.csv")
+head(math)
+```
 
 Data 2: poorly behaved data (high pvalue)
 Interpret slope and intercept, fiit model
@@ -41,6 +77,22 @@ Hint: here's a function for RMSE
 5.	Simulate rnorm variance depends on the mean
 6.	Simulate power law function (describes lots of stuff)
 
+
+prediction:
+```{r functions}
+r2<-function(y_hat,y) {
+  
+  RSS<-sum((((y_hat))-(y))^2)
+  
+  TSS<-sum(((y)-(mean(y)))^2)
+  
+  return(1-RSS/TSS)}
+
+rmse=function(y_hat,y)
+{
+  return(sqrt(mean((y-y_hat)^2)))
+}
+```
 
 ```{r cars}
 summary(cars)
